@@ -32,6 +32,6 @@ jobs:
             echo "scaling-policy.yml targets '$DEPLOYMENT_NAME', which checkout-api-deployment.yml does not define"
             exit 1
           }
-          grep -q 'memory_mi:' scaling-policy.yaml || { echo "threshold.memory_mi is missing"; exit 1; }
-          grep -q 'replicas:' scaling-policy.yaml || { echo "action.replicas is missing"; exit 1; }
-          echo "scaling-policy.yaml is valid and targets a real Deployment"
+          grep -q 'memory_mi:' scaling-policy.yml || { echo "threshold.memory_mi is missing"; exit 1; }
+          grep -q 'replicas:' scaling-policy.yml || { echo "action.replicas is missing"; exit 1; }
+          echo "scaling-policy.yml is valid and targets a real Deployment"
